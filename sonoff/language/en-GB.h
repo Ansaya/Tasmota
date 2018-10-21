@@ -485,6 +485,8 @@
 #define D_SENSOR_TM1638_DIO "TM16 DIO"
 #define D_SENSOR_TM1638_STB "TM16 STB"
 
+#define D_SENSOR_PGA2311_MUTE "PGA2311 Mute"
+
 // Units
 #define D_UNIT_AMPERE "A"
 #define D_UNIT_CENTIMETER "cm"

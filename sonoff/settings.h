@@ -330,7 +330,8 @@ struct SYSCFG {
 
   char          rules[MAX_RULE_SETS][MAX_RULE_SIZE]; // 800 uses 512 bytes in v5.12.0m, 3 x 512 bytes in v5.14.0b
 
-                                           // E00 - FFF free locations
+  uint8_t       pga2311_volume;            // E00
+                                           // E01 - FFF free locations
 } Settings;
 
 struct RTCRBT {

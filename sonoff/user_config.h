@@ -306,7 +306,9 @@
 //#define USE_SPI                                  // SPI using library TasmotaTFT
 
 #ifdef USE_SPI
-
+ #define USE_PGA2311                            // Expose PGA2311 volume control through SPI interface
+    #define PGA2311_NON_LINEAR_1                 // Volume settings are stretched to allow better adjustability 
+    //#define PGA2311_NON_LINEAR_2                 // Volume settings are stretched twice to allow even more adjustability
 #endif  // USE_SPI
 
 // -- Serial sensors ------------------------------
