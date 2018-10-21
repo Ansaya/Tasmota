@@ -486,6 +486,9 @@
 #define D_SENSOR_TM1638_STB "TM16 STB"
 
 #define D_SENSOR_PGA2311_MUTE "PGA2311 Mute"
+#define D_SENSOR_AWNING_UP "Awning Up"
+#define D_SENSOR_AWNING_DOWN "Awning Down"
+#define D_SENSOR_AWNING_STOP "Awning Stop"
 
 // Units
 #define D_UNIT_AMPERE "A"

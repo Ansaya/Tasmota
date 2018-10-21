@@ -121,6 +121,9 @@ enum UserSelectablePins {
   GPIO_CNTR3_NP,
   GPIO_CNTR4_NP,
   GPIO_PGA2311_MUTE,
+  GPIO_AWNING_UP,
+  GPIO_AWNING_DOWN,
+  GPIO_AWNING_STOP,
   GPIO_SENSOR_END };
 
 // Programmer selectable GPIO functionality offset by user selectable GPIOs
@@ -171,7 +174,8 @@ const char kSensorNames[] PROGMEM =
   D_SENSOR_SWITCH "1n|" D_SENSOR_SWITCH "2n|" D_SENSOR_SWITCH "3n|" D_SENSOR_SWITCH "4n|" D_SENSOR_SWITCH "5n|" D_SENSOR_SWITCH "6n|" D_SENSOR_SWITCH "7n|" D_SENSOR_SWITCH "8n|"
   D_SENSOR_BUTTON "1n|" D_SENSOR_BUTTON "2n|" D_SENSOR_BUTTON "3n|" D_SENSOR_BUTTON "4n|"
   D_SENSOR_COUNTER "1n|" D_SENSOR_COUNTER "2n|" D_SENSOR_COUNTER "3n|" D_SENSOR_COUNTER "4n|"
-  D_SENSOR_PGA2311_MUTE "|";
+  D_SENSOR_PGA2311_MUTE "|"
+  D_SENSOR_AWNING_UP "|" D_SENSOR_AWNING_DOWN "|" D_SENSOR_AWNING_STOP "|";
 
 /********************************************************************************************/
 

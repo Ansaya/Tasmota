@@ -273,6 +273,10 @@
 #define USE_DS18x20                              // Optional for more than one DS18x20 sensors with id sort, single scan and read retry (+1k3 code)
 //#define USE_DS18x20_LEGACY                       // Optional for more than one DS18x20 sensors with dynamic scan using library OneWire (+1k5 code)
 
+// -- Multipin drivers ----------------------------
+//#define USE_AWNING                               // Awning controller for a two/three switch awning (UP, DOWN, STOP)
+  #define AWNING_OPEN_UP_TIME 47                 // Time it takes to fully open the awning from a fully closed state (in seconds)
+
 // -- I2C sensors ---------------------------------
 #define USE_I2C                                  // I2C using library wire (+10k code, 0k2 mem, 124 iram)
 
