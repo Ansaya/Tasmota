@@ -40,6 +40,8 @@ void pga2311_write(uint8_t data)
         data = PGA2311_MAX_VOLUME;
     }
 
+    pga2311_volume = data;
+
     #if defined(PGA2311_NON_LINEAR_1) || defined(PGA2311_NON_LINEAR_2)
     uint8_t volume = volumeToValue[data];
     #else
@@ -91,6 +93,25 @@ void pga2311_mqtt_stat()
     }
 }
 
+#define XSNS_93
+
+boolean Xsns93(byte function) 
+{
+    boolean result = false;
+
+    if(spi_flg && pin[GPIO_PGA2311_MUTE] < 99) {
+        switch(function) {
+            case FUNC_SAVE_BEFORE_RESTART:
+                Settings.pga2311_volume = pga2311_volume;
+                break;
+            default:
+                break;
+        }
+    }
+
+    return false;
+}
+
 #define XDRV_93
 
 boolean Xdrv93(byte function) 
@@ -115,11 +136,6 @@ boolean Xdrv93(byte function)
                 }
                 break;
             case FUNC_FREE_MEM:
-                break;
-            case FUNC_SAVE_BEFORE_RESTART:
-                Settings.pga2311_volume = pga2311_volume;
-                break;
-            default:
                 break;
         }
     }
